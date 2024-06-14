@@ -1,6 +1,6 @@
 ﻿namespace MinhaBiblioteca.Core.Entities;
 
-public class Book: BaseEntity
+public class Book : BaseEntity
 {
     public Book(string title, string iSBN, DateTime publishedDate, int amount)
     {
@@ -8,7 +8,7 @@ public class Book: BaseEntity
         ISBN = iSBN;
         PublishedDate = publishedDate;
         Amount = amount;
-        
+
         Loans = [];
         CreatedAt = DateTime.Now;
         UpdatedAt = DateTime.Now;

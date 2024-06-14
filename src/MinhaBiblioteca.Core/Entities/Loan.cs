@@ -1,18 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-namespace MinhaBiblioteca.Core.Entities;
+﻿namespace MinhaBiblioteca.Core.Entities;
 
-public class Loan: BaseEntity
+public class Loan : BaseEntity
 {
     public Loan(DateTime loanDate, DateTime? returnDate, Guid userId, Guid bookId)
     {
         LoanDate = loanDate;
         ReturnDate = returnDate;
-        
+
         CreatedAt = DateTime.Now;
         UpdatedAt = DateTime.Now;
-        
+
         UserId = userId;
         BookId = bookId;
     }

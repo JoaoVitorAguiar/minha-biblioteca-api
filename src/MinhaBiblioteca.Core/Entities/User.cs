@@ -2,7 +2,7 @@
 
 namespace MinhaBiblioteca.Core.Entities;
 
-public class User: BaseEntity
+public class User : BaseEntity
 {
     public User(string name, string email, string passwordHash, Role role)
     {
