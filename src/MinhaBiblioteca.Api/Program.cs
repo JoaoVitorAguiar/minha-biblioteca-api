@@ -1,9 +1,16 @@
 using Microsoft.EntityFrameworkCore;
+using MinhaBiblioteca.Core.Repositories;
+using MinhaBiblioteca.Core.Repository;
 using MinhaBiblioteca.Infrastructure;
+using MinhaBiblioteca.Infrastructure.Persistence.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+
+builder.Services.AddScoped<IBookRepository, BookRepository>();
+builder.Services.AddScoped<IUserRepository, UserRepository>();
+
 var connection = builder.Configuration.GetConnectionString("DefaultConnection");
 builder.Services.AddDbContext<MinhaBibliotecaDbContext>(options =>
     options.UseNpgsql(connection));

@@ -1,4 +1,6 @@
-﻿namespace MinhaBiblioteca.Core.Entities;
+﻿using System.Reflection.Metadata.Ecma335;
+
+namespace MinhaBiblioteca.Core.Entities;
 
 public class Loan : BaseEntity
 {
@@ -22,4 +24,9 @@ public class Loan : BaseEntity
 
     public User User { get; private set; }
     public Book Book { get; private set; }
+
+    public void ReturnLoan()
+    {
+        this.ReturnDate = DateTime.UtcNow;
+    }
 }
