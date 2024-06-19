@@ -12,13 +12,13 @@ public class User : BaseEntity
         Role = role;
 
         Loans = [];
-        CreatedAt = DateTime.Now;
-        UpdatedAt = DateTime.Now;
+        CreatedAt = DateTime.UtcNow;
+        UpdatedAt = DateTime.UtcNow;
     }
 
     public string Name { get; private set; }
     public string Email { get; private set; }
     public string PasswordHash { get; private set; }
     public Role Role { get; private set; }
-    public List<Loan> Loans { get; set; }
+    public ICollection<Loan> Loans { get; set; }
 }

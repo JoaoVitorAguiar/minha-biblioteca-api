@@ -10,8 +10,8 @@ public class Book : BaseEntity
         Amount = amount;
 
         Loans = [];
-        CreatedAt = DateTime.Now;
-        UpdatedAt = DateTime.Now;
+        CreatedAt = DateTime.UtcNow;
+        UpdatedAt = DateTime.UtcNow;
     }
 
     public string Title { get; private set; }
@@ -19,5 +19,5 @@ public class Book : BaseEntity
     public DateTime PublishedDate { get; private set; }
     public int Amount { get; private set; }
 
-    public List<Loan> Loans { get; private set; }
+    public ICollection<Loan> Loans { get; private set; }
 }

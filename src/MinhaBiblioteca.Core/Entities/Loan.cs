@@ -7,8 +7,8 @@ public class Loan : BaseEntity
         LoanDate = loanDate;
         ReturnDate = returnDate;
 
-        CreatedAt = DateTime.Now;
-        UpdatedAt = DateTime.Now;
+        CreatedAt = DateTime.UtcNow;
+        UpdatedAt = DateTime.UtcNow;
 
         UserId = userId;
         BookId = bookId;
