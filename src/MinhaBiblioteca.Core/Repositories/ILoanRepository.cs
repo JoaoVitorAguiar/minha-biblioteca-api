@@ -1,12 +1,16 @@
 ﻿using MinhaBiblioteca.Core.Entities;
+using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+
 namespace MinhaBiblioteca.Core.Repositories;
 
 public interface ILoanRepository
 {
-    Task Lend(Loan loan);
-    Task<Loan> GetById(Guid id);
-    Task<IEnumerable<Loan>> GetByUser(User user);
-    Task<IEnumerable<Loan>> GetByBook(Book book);
-    Task<IEnumerable<Loan>> GetLoans();
-    Task Return(Loan loan);
+    Task<IEnumerable<Loan>> GetByBookAsync(Book book);
+    Task<Loan> GetByIdAsync(Guid id);
+    Task<IEnumerable<Loan>> GetByUserAsync(User user);
+    Task<IEnumerable<Loan>> GetLoansAsync();
+    Task LendAsync(Loan loan);
+    Task ReturnAsync(Loan loan);
 }
