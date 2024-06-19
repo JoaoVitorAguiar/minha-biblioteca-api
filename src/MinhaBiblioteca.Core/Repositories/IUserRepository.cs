@@ -4,10 +4,10 @@ namespace MinhaBiblioteca.Core.Repository;
 
 public interface IUserRepository
 {
-    void Create(User user);
-    User GetById(Guid id);
-    User GetByEmail(string name);
-    IEnumerable<User> GetUsers();
-    void Update(User user);
-    void Delete(User user);
+    Task CreateAsync(User user);
+    Task<User> GetByIdAsync(Guid id);
+    Task<User> GetByEmailAsync(string name);
+    Task<IEnumerable<User>> GetUsersAsync();
+    Task UpdateAsync(User user);
+    Task DeleteAsync(User user);
 }

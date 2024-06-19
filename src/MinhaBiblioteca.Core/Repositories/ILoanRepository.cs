@@ -3,10 +3,10 @@ namespace MinhaBiblioteca.Core.Repositories;
 
 public interface ILoanRepository
 {
-    void Lend(Loan loan);
-    Loan GetById(Guid id);
-    IEnumerable<Loan> GetByUser(User user);
-    IEnumerable<Loan> GetByBook(Book book);
-    IEnumerable<Loan> GetLoans();
-    void Return(Loan loan);
+    Task Lend(Loan loan);
+    Task<Loan> GetById(Guid id);
+    Task<IEnumerable<Loan>> GetByUser(User user);
+    Task<IEnumerable<Loan>> GetByBook(Book book);
+    Task<IEnumerable<Loan>> GetLoans();
+    Task Return(Loan loan);
 }

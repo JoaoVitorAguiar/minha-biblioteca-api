@@ -4,11 +4,11 @@ namespace MinhaBiblioteca.Core.Repositories;
 
 public interface IBookRepository
 {
-    void Create(Book book);
-    Book GetById(Guid id);
-    Book GetByName(string name);
-    Book GetByIsbn(string isbn);
-    IEnumerable<Book> GetBooks();
-    void Update(Book book);
-    void Delete(Book book);
+    Task CreateAsync(Book book);
+    Task<Book> GetByIdAsync(Guid id);
+    Task<Book> GetByNameAsync(string name);
+    Task<Book> GetByIsbnAsync(string isbn);
+    Task<IEnumerable<Book>> GetBooksAsync();
+    Task Update(Book book);
+    Task Delete(Book book);
 }
