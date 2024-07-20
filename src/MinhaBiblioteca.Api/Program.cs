@@ -1,19 +1,6 @@
-using Microsoft.EntityFrameworkCore;
-using MinhaBiblioteca.Core.Repositories;
-using MinhaBiblioteca.Core.Repository;
-using MinhaBiblioteca.Infrastructure;
-using MinhaBiblioteca.Infrastructure.Persistence.Repositories;
-
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-
-builder.Services.AddScoped<IBookRepository, BookRepository>();
-builder.Services.AddScoped<IUserRepository, UserRepository>();
-
-var connection = builder.Configuration.GetConnectionString("DefaultConnection");
-builder.Services.AddDbContext<MinhaBibliotecaDbContext>(options =>
-    options.UseNpgsql(connection));
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
