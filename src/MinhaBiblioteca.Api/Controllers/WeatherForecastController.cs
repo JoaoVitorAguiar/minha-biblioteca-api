@@ -1,4 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Infrastructure;
+using MinhaBiblioteca.Core.Entities;
+using MinhaBiblioteca.Core.Repositories;
+using System.Collections;
 
 namespace MinhaBiblioteca.Api.Controllers;
 
@@ -12,10 +16,12 @@ public class WeatherForecastController : ControllerBase
     };
 
     private readonly ILogger<WeatherForecastController> _logger;
+    private readonly IUserRepository _userRepository;
 
-    public WeatherForecastController(ILogger<WeatherForecastController> logger)
+    public WeatherForecastController(ILogger<WeatherForecastController> logger, IUserRepository userRepository)
     {
         _logger = logger;
+        _userRepository = userRepository;
     }
 
     [HttpGet(Name = "GetWeatherForecast")]
@@ -28,5 +34,12 @@ public class WeatherForecastController : ControllerBase
             Summary = Summaries[Random.Shared.Next(Summaries.Length)]
         })
         .ToArray();
+    }
+
+    [HttpGet("test")]
+    public async Task<IActionResult> GetTests()
+    {
+        var users = await _userRepository.GetAllAsync();
+        return Ok(users);
     }
 }
