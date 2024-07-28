@@ -37,6 +37,11 @@ public class BookRepository: IBookRepository
         return await _dbContext.Books.FindAsync(id);
     }
 
+    public async Task<Book?> GetByISBNAsync(string isbn)
+    {
+        return await _dbContext.Books.AsNoTracking().FirstOrDefaultAsync(b => b.ISBN == isbn);
+    }
+
     public async Task<Book> UpdateAsync(Book book)
     {
         _dbContext.Books.Update(book);

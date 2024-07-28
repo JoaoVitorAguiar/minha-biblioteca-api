@@ -13,10 +13,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Books\Queries\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\MinhaBiblioteca.Core\MinhaBiblioteca.Core.csproj" />
     <ProjectReference Include="..\MinhaBiblioteca.Infrastructure\MinhaBiblioteca.Infrastructure.csproj" />
   </ItemGroup>

@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MinhaBiblioteca.Application.Books.Commands.CreateBookCommand;
+namespace MinhaBiblioteca.Application.Books.Commands.CreateBook;
 
 public class CreateBookCommand: IRequest<Unit>
 {

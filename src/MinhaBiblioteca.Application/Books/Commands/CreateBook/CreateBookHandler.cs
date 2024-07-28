@@ -3,7 +3,7 @@ using MinhaBiblioteca.Core.Entities;
 using MinhaBiblioteca.Core.Exceptions;
 using MinhaBiblioteca.Core.Repositories;
 
-namespace MinhaBiblioteca.Application.Books.Commands.CreateBookCommand;
+namespace MinhaBiblioteca.Application.Books.Commands.CreateBook;
 
 public class CreateBookHandler : IRequestHandler<CreateBookCommand, Unit>
 {

@@ -1,6 +1,7 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using MinhaBiblioteca.Application.Books.Commands.CreateBookCommand;
+using MinhaBiblioteca.Application.Books.Commands.CreateBook;
+using MinhaBiblioteca.Application.Books.Queries.GetBookByISBN;
 
 namespace MinhaBiblioteca.Api.Controllers;
 
@@ -21,5 +22,13 @@ public class BookController : ControllerBase
     {
         await _mediator.Send(command);
         return Ok();
+    }
+
+    [HttpGet]
+    public async Task<IActionResult> GetByIsbn(
+       [FromQuery] GetBookByISBNQuery command)
+    {
+        var book = await _mediator.Send(command);
+        return Ok(book);
     }
 }
