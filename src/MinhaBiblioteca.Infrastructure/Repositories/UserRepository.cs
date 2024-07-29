@@ -1,6 +1,6 @@
-﻿using MinhaBiblioteca.Core.Entities;
+﻿using Microsoft.EntityFrameworkCore;
+using MinhaBiblioteca.Core.Entities;
 using MinhaBiblioteca.Core.Repositories;
-using Microsoft.EntityFrameworkCore;
 
 namespace MinhaBiblioteca.Infrastructure.Repositories;
 
@@ -30,6 +30,11 @@ public class UserRepository : IUserRepository
     public async Task<IList<User>> GetAllAsync()
     {
         return await _dbContext.Users.ToListAsync();
+    }
+
+    public async Task<User?> GetByEmailAsync(string email)
+    {
+        return await _dbContext.Users.FirstAsync(x => x.Email == email);  
     }
 
     public async Task<User?> GetByIdAsync(Guid id)

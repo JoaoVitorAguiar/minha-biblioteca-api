@@ -17,4 +17,8 @@
     <ProjectReference Include="..\MinhaBiblioteca.Infrastructure\MinhaBiblioteca.Infrastructure.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Loans\Queries\" />
+  </ItemGroup>
+
 </Project>

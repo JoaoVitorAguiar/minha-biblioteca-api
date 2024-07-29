@@ -9,5 +9,5 @@ public interface IBookRepository
     Task<Book> DeleteAsync(Book book);
     Task<Book?> GetByIdAsync(Guid id);
     Task<Book?> GetByISBNAsync(string isbn);
-    Task<IList<Book>> GetAllAsync(); 
+    Task<IList<Book>> GetAllAsync();
 }

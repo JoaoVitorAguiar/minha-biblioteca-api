@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace MinhaBiblioteca.Core.Entities;
+﻿namespace MinhaBiblioteca.Core.Entities;
 
 public class Loan : BaseEntity
 {

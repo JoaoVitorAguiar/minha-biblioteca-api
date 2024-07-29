@@ -7,7 +7,7 @@ namespace MinhaBiblioteca.Application.Books.Commands.CreateBook;
 
 public class CreateBookHandler : IRequestHandler<CreateBookCommand, Unit>
 {
-   private readonly IBookRepository _bookRepository;
+    private readonly IBookRepository _bookRepository;
     private readonly ICategoryRepository _categoryRepository;
 
     public CreateBookHandler(IBookRepository bookRepository, ICategoryRepository categoryRepository)

@@ -1,10 +1,10 @@
-﻿using MinhaBiblioteca.Core.Entities;
+﻿using Microsoft.EntityFrameworkCore;
+using MinhaBiblioteca.Core.Entities;
 using MinhaBiblioteca.Core.Repositories;
-using Microsoft.EntityFrameworkCore;
 
 namespace MinhaBiblioteca.Infrastructure.Repositories;
 
-public class BookRepository: IBookRepository
+public class BookRepository : IBookRepository
 {
     private readonly MinhaBibliotecaDbContext _dbContext;
 

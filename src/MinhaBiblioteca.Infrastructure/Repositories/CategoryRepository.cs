@@ -1,6 +1,6 @@
-﻿using MinhaBiblioteca.Core.Entities;
+﻿using Microsoft.EntityFrameworkCore;
+using MinhaBiblioteca.Core.Entities;
 using MinhaBiblioteca.Core.Repositories;
-using Microsoft.EntityFrameworkCore;
 
 namespace MinhaBiblioteca.Infrastructure.Repositories;
 

@@ -1,10 +1,5 @@
 ﻿using Microsoft.AspNetCore.Diagnostics;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
-using System.Collections.Generic;
-using System.Threading;
-using System.Threading.Tasks;
 
 namespace MinhaBiblioteca.Api.Services.ExceptionsHandler;
 

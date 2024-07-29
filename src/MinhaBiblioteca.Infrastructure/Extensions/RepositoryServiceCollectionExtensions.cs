@@ -1,6 +1,8 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using MinhaBiblioteca.Core.Repositories;
+using MinhaBiblioteca.Core.Services;
 using MinhaBiblioteca.Infrastructure.Repositories;
+using MinhaBiblioteca.Infrastructure.Services;
 
 namespace MinhaBiblioteca.Infrastructure.Extensions;
 

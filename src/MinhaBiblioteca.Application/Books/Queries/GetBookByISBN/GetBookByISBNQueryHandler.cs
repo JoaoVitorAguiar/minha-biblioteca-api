@@ -2,7 +2,6 @@
 using MinhaBiblioteca.Core.Entities;
 using MinhaBiblioteca.Core.Exceptions;
 using MinhaBiblioteca.Core.Repositories;
-using System.Runtime.InteropServices;
 
 namespace MinhaBiblioteca.Application.Books.Queries.GetBookByISBN;
 

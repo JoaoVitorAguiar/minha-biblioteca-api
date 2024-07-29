@@ -1,6 +1,4 @@
-﻿using MinhaBiblioteca.Core.Entities;
-
-namespace MinhaBiblioteca.Core.Exceptions;
+﻿namespace MinhaBiblioteca.Core.Exceptions;
 
 public class NotFoundException : Exception
 {

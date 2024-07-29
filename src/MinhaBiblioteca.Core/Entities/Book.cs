@@ -1,6 +1,6 @@
 ﻿namespace MinhaBiblioteca.Core.Entities;
 
-public class Book: BaseEntity
+public class Book : BaseEntity
 {
     public Book() { }
     public Book(string title, string iSBN, string author, DateTime publishedDate, Guid categoryId)
@@ -21,7 +21,7 @@ public class Book: BaseEntity
     public string ISBN { get; private set; }
     public string Author { get; private set; }
     public DateTime PublishedDate { get; private set; }
-    public Guid CategoryId { get;  set; }
+    public Guid CategoryId { get; set; }
     public Category Category { get; private set; }
     public ICollection<User> Users { get; private set; }
 }

@@ -4,13 +4,13 @@ using MinhaBiblioteca.Api.Services.Behaviors;
 using MinhaBiblioteca.Api.Services.ExceptionsHandler;
 using MinhaBiblioteca.Infrastructure;
 using MinhaBiblioteca.Infrastructure.Extensions;
-using System;
 using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRepositoryServices();
+builder.Services.AddServices();
 builder.Services.AddMediatR(cfg =>
 {
     cfg.RegisterServicesFromAssemblies(

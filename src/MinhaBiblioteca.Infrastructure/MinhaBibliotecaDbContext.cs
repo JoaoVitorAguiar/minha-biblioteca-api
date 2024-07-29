@@ -3,9 +3,9 @@ using MinhaBiblioteca.Core.Entities;
 
 namespace MinhaBiblioteca.Infrastructure;
 
-public class MinhaBibliotecaDbContext: DbContext
+public class MinhaBibliotecaDbContext : DbContext
 {
-    public MinhaBibliotecaDbContext(DbContextOptions<MinhaBibliotecaDbContext> options): base(options)
+    public MinhaBibliotecaDbContext(DbContextOptions<MinhaBibliotecaDbContext> options) : base(options)
     { }
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

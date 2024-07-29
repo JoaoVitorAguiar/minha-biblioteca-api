@@ -1,8 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Infrastructure;
-using MinhaBiblioteca.Core.Entities;
 using MinhaBiblioteca.Core.Repositories;
-using System.Collections;
 
 namespace MinhaBiblioteca.Api.Controllers;
 
