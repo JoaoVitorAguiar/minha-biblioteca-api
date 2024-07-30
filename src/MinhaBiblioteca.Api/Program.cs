@@ -22,8 +22,10 @@ builder.Services.AddMediatR(cfg =>
 builder.Services.AddValidatorsFromAssembly(Assembly.Load("MinhaBiblioteca.Application"));
 
 
-builder.Services.AddExceptionHandler<NotFoundExceptionHandler>();
 builder.Services.AddExceptionHandler<ValidationExceptionHandler>();
+builder.Services.AddExceptionHandler<NotFoundExceptionHandler>();
+builder.Services.AddExceptionHandler<AlreadyExistsExceptionHandler>();
+builder.Services.AddExceptionHandler<NotAvaliableHandler>();
 builder.Services.AddExceptionHandler<GlobalExceptionHandler>();
 builder.Services.AddProblemDetails();
 

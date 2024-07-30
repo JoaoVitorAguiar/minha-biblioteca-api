@@ -34,7 +34,7 @@ public class UserRepository : IUserRepository
 
     public async Task<User?> GetByEmailAsync(string email)
     {
-        return await _dbContext.Users.FirstAsync(x => x.Email == email);  
+        return await _dbContext.Users.FirstOrDefaultAsync(x => x.Email == email);  
     }
 
     public async Task<User?> GetByIdAsync(Guid id)
