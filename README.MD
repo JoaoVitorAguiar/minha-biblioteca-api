@@ -1,9 +1,11 @@
 # Gerenciador de Biblioteca
 
 ## Descrição do Projeto
+
 Este é um Sistema de Gerenciamento de Livro / Biblioteca. O objetivo é desenvolver um sistema onde seja possível cadastrar livros, usuários, empréstimos, além de outras funcionalidades.
 
 ## Funcionalidades
+
 - Cadastrar um Livro
 - Validar Dados
 - Consultar Todos Livros
@@ -16,11 +18,13 @@ Este é um Sistema de Gerenciamento de Livro / Biblioteca. O objetivo é desenvo
 - Emitir Mensagem Com Dias de Atraso (Se Estiver) ou Se Estiver em Dia
 
 ## Entidades e Dados
+
 - Livro: Id (int), Título (string), Autor (string), ISBN (string), Ano de Publicação (int)
 - Usuário: Id (int), Nome (string), Email (string)
 - Empréstimo: Id (int), IdUsuario, IdLivro, Data de Empréstimo (Hoje / Agora)
 
 ## Passo a Passo
+
 1. Criar o Projeto de tipo ASP.NET Core API
 2. Criar as Classes das Entidades
 3. Criar o Controller BooksController (ou LivrosController)
@@ -30,4 +34,12 @@ Este é um Sistema de Gerenciamento de Livro / Biblioteca. O objetivo é desenvo
 7. Utilizar Nas Actions
 
 ## Observações
+
 Nesta versão, o Entity Framework Core é usado para acesso a dados, até mesmo em Memória. Recomenda-se usar SQL Server. É sugerido aplicar o Padrão Repository e a Arquitetura Limpa.
+
+## O que eu fiz:
+
+Sistema onde o dono da biblioteca tem controle dos livros devolvidos ou não;
+Admin pode cadastrar livros
+Admin pode cadastrar copias de livros
+Admin da baixa se exemplares foram devolvidos ou não
