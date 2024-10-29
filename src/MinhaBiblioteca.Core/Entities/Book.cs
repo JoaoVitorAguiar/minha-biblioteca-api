@@ -14,7 +14,7 @@ public class Book : BaseEntity
 
         CreatedAt = DateTime.UtcNow;
         UpdatedAt = DateTime.UtcNow;
-        Users = [];
+        BookCopies = [];
     }
 
     public string Title { get; private set; }
@@ -23,5 +23,5 @@ public class Book : BaseEntity
     public DateTime PublishedDate { get; private set; }
     public Guid CategoryId { get; set; }
     public Category Category { get; private set; }
-    public ICollection<User> Users { get; private set; }
+    public IList<BookCopy> BookCopies { get; private set; }
 }

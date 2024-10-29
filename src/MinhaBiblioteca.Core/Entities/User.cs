@@ -14,14 +14,14 @@ public class User : BaseEntity
         PasswordHash = passwordHash;
         Role = role;
 
-        Books = [];
         CreatedAt = DateTime.UtcNow;
         UpdatedAt = DateTime.UtcNow;
+        Loans = [];
     }
 
     public string Name { get; private set; }
     public string Email { get; private set; }
     public string PasswordHash { get; private set; }
+    public IList<Loan> Loans { get; private set; }
     public Role Role { get; private set; }
-    public ICollection<Book> Books { get; set; }
 }

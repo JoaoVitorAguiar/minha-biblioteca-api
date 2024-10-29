@@ -3,27 +3,23 @@
 public class Loan : BaseEntity
 {
     public Loan() { }
-    public Loan(DateTime loanDate, DateTime? returnDate, Guid userId, Guid bookId)
+    public Loan(Guid userId, Guid bookCopyId, DateTime? returnDate)
     {
         Id = Guid.NewGuid();
-        LoanDate = loanDate;
         ReturnDate = returnDate;
 
         CreatedAt = DateTime.UtcNow;
         UpdatedAt = DateTime.UtcNow;
 
         UserId = userId;
-        BookId = bookId;
+        BookCopyId = bookCopyId;
     }
 
-    public DateTime LoanDate { get; private set; }
     public DateTime? ReturnDate { get; private set; }
-
     public Guid UserId { get; private set; }
-    public Guid BookId { get; private set; }
-
     public User User { get; private set; }
-    public Book Book { get; private set; }
+    public Guid BookCopyId { get; private set; }
+    public BookCopy BookCopy { get; private set; }
 
     public void ReturnLoan()
     {

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace MinhaBiblioteca.Core.Services;
 
-public  interface IBookService
+public interface IBookService
 {
-    Task<Book?> GetFirstBookAvailableByIsbnOrDefaultAsync(string isbn); 
+    Task<BookCopy?> GetFirstBookCopyAvailableByIsbnOrDefaultAsync(Book book);
 }
