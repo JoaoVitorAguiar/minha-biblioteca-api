@@ -9,6 +9,7 @@ public class LoanConfiguration : IEntityTypeConfiguration<Loan>
     public void Configure(EntityTypeBuilder<Loan> builder)
     {
         builder.HasKey(l => l.Id);
+
         builder.Property(l => l.Id)
             .ValueGeneratedOnAdd();
     }

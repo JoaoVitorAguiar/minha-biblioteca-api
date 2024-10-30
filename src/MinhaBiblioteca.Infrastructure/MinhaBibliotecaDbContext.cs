@@ -15,6 +15,5 @@ public class MinhaBibliotecaDbContext : DbContext
     public DbSet<Book> Books { get; set; }
     public DbSet<Loan> Loans { get; set; }
     public DbSet<Category> Categories { get; set; }
-
-
+    public DbSet<BookCopy> BookCopies { get; set; }
 }

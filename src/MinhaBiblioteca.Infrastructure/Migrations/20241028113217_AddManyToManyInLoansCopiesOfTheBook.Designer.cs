@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using MinhaBiblioteca.Infrastructure;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
@@ -11,9 +12,11 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace MinhaBiblioteca.Infrastructure.Migrations
 {
     [DbContext(typeof(MinhaBibliotecaDbContext))]
-    partial class MinhaBibliotecaDbContextModelSnapshot : ModelSnapshot
+    [Migration("20241028113217_AddManyToManyInLoansCopiesOfTheBook")]
+    partial class AddManyToManyInLoansCopiesOfTheBook
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

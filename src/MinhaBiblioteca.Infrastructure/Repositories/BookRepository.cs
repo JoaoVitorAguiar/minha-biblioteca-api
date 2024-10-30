@@ -37,7 +37,7 @@ public class BookRepository : IBookRepository
         return await _dbContext.Books.FindAsync(id);
     }
 
-    public async Task<Book?> GetByISBNAsync(string isbn)
+    public async Task<Book?> GetByIsbnAsync(string isbn)
     {
         return await _dbContext.Books.AsNoTracking().FirstOrDefaultAsync(b => b.ISBN == isbn);
     }

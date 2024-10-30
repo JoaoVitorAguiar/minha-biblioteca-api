@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using MinhaBiblioteca.Infrastructure;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
@@ -11,9 +12,11 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace MinhaBiblioteca.Infrastructure.Migrations
 {
     [DbContext(typeof(MinhaBibliotecaDbContext))]
-    partial class MinhaBibliotecaDbContextModelSnapshot : ModelSnapshot
+    [Migration("20241024175600_Initial")]
+    partial class Initial
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -110,143 +113,143 @@ namespace MinhaBiblioteca.Infrastructure.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("9e9af7a0-5543-42d9-b222-082354502e17"),
-                            CreatedAt = new DateTime(2024, 10, 28, 11, 32, 17, 382, DateTimeKind.Utc).AddTicks(3965),
+                            Id = new Guid("9946192a-3920-4fa8-abbe-80568241fb0e"),
+                            CreatedAt = new DateTime(2024, 10, 24, 17, 56, 0, 187, DateTimeKind.Utc).AddTicks(1698),
                             Name = "Ação",
-                            UpdatedAt = new DateTime(2024, 10, 28, 11, 32, 17, 382, DateTimeKind.Utc).AddTicks(3966)
+                            UpdatedAt = new DateTime(2024, 10, 24, 17, 56, 0, 187, DateTimeKind.Utc).AddTicks(1699)
                         },
                         new
                         {
-                            Id = new Guid("bb98d688-80e1-49ce-a9b3-92fca36a0b55"),
-                            CreatedAt = new DateTime(2024, 10, 28, 11, 32, 17, 382, DateTimeKind.Utc).AddTicks(3971),
+                            Id = new Guid("3219f776-4516-472e-b872-cc2561a87089"),
+                            CreatedAt = new DateTime(2024, 10, 24, 17, 56, 0, 187, DateTimeKind.Utc).AddTicks(1714),
                             Name = "Aventura",
-                            UpdatedAt = new DateTime(2024, 10, 28, 11, 32, 17, 382, DateTimeKind.Utc).AddTicks(3971)
+                            UpdatedAt = new DateTime(2024, 10, 24, 17, 56, 0, 187, DateTimeKind.Utc).AddTicks(1716)
                         },
                         new
                         {
-                            Id = new Guid("3de6cf8e-b487-4477-a2e4-04e4f093bae3"),
-                            CreatedAt = new DateTime(2024, 10, 28, 11, 32, 17, 382, DateTimeKind.Utc).AddTicks(3976),
+                            Id = new Guid("4fc2e6ff-7d37-41eb-8c04-c7cf18769a53"),
+                            CreatedAt = new DateTime(2024, 10, 24, 17, 56, 0, 187, DateTimeKind.Utc).AddTicks(1728),
                             Name = "Romance",
-                            UpdatedAt = new DateTime(2024, 10, 28, 11, 32, 17, 382, DateTimeKind.Utc).AddTicks(3976)
+                            UpdatedAt = new DateTime(2024, 10, 24, 17, 56, 0, 187, DateTimeKind.Utc).AddTicks(1729)
                         },
                         new
                         {
-                            Id = new Guid("2391e2bc-e316-4d2d-8177-c9c77490ec5a"),
-                            CreatedAt = new DateTime(2024, 10, 28, 11, 32, 17, 382, DateTimeKind.Utc).AddTicks(3980),
+                            Id = new Guid("aed48971-3ba4-4b58-a148-2c5c39983b50"),
+                            CreatedAt = new DateTime(2024, 10, 24, 17, 56, 0, 187, DateTimeKind.Utc).AddTicks(1741),
                             Name = "Ficção Científica",
-                            UpdatedAt = new DateTime(2024, 10, 28, 11, 32, 17, 382, DateTimeKind.Utc).AddTicks(3980)
+                            UpdatedAt = new DateTime(2024, 10, 24, 17, 56, 0, 187, DateTimeKind.Utc).AddTicks(1742)
                         },
                         new
                         {
-                            Id = new Guid("cc5ce429-1295-4d68-be86-0d8a178d3461"),
-                            CreatedAt = new DateTime(2024, 10, 28, 11, 32, 17, 382, DateTimeKind.Utc).AddTicks(3985),
+                            Id = new Guid("6134c6b0-da2b-48d6-9661-951fce12c00b"),
+                            CreatedAt = new DateTime(2024, 10, 24, 17, 56, 0, 187, DateTimeKind.Utc).AddTicks(1754),
                             Name = "Fantasia",
-                            UpdatedAt = new DateTime(2024, 10, 28, 11, 32, 17, 382, DateTimeKind.Utc).AddTicks(3985)
+                            UpdatedAt = new DateTime(2024, 10, 24, 17, 56, 0, 187, DateTimeKind.Utc).AddTicks(1755)
                         },
                         new
                         {
-                            Id = new Guid("debc9601-1d73-4561-8774-1f5d2365e8ef"),
-                            CreatedAt = new DateTime(2024, 10, 28, 11, 32, 17, 382, DateTimeKind.Utc).AddTicks(3989),
+                            Id = new Guid("ad3902fd-9a3d-4d97-967a-bfc711c71029"),
+                            CreatedAt = new DateTime(2024, 10, 24, 17, 56, 0, 187, DateTimeKind.Utc).AddTicks(1766),
                             Name = "Biografia",
-                            UpdatedAt = new DateTime(2024, 10, 28, 11, 32, 17, 382, DateTimeKind.Utc).AddTicks(3990)
+                            UpdatedAt = new DateTime(2024, 10, 24, 17, 56, 0, 187, DateTimeKind.Utc).AddTicks(1767)
                         },
                         new
                         {
-                            Id = new Guid("951a1f02-ebc6-41da-85c2-4364cb1c3b26"),
-                            CreatedAt = new DateTime(2024, 10, 28, 11, 32, 17, 382, DateTimeKind.Utc).AddTicks(3994),
+                            Id = new Guid("d52b9604-0115-4a46-9ebf-50c783e5a240"),
+                            CreatedAt = new DateTime(2024, 10, 24, 17, 56, 0, 187, DateTimeKind.Utc).AddTicks(1779),
                             Name = "História",
-                            UpdatedAt = new DateTime(2024, 10, 28, 11, 32, 17, 382, DateTimeKind.Utc).AddTicks(3994)
+                            UpdatedAt = new DateTime(2024, 10, 24, 17, 56, 0, 187, DateTimeKind.Utc).AddTicks(1780)
                         },
                         new
                         {
-                            Id = new Guid("d96a5eeb-4713-4580-9076-79bf07249c79"),
-                            CreatedAt = new DateTime(2024, 10, 28, 11, 32, 17, 382, DateTimeKind.Utc).AddTicks(3999),
+                            Id = new Guid("f22c7c45-239f-49e8-a48a-90f6a7afeeb4"),
+                            CreatedAt = new DateTime(2024, 10, 24, 17, 56, 0, 187, DateTimeKind.Utc).AddTicks(1792),
                             Name = "Mistério",
-                            UpdatedAt = new DateTime(2024, 10, 28, 11, 32, 17, 382, DateTimeKind.Utc).AddTicks(3999)
+                            UpdatedAt = new DateTime(2024, 10, 24, 17, 56, 0, 187, DateTimeKind.Utc).AddTicks(1793)
                         },
                         new
                         {
-                            Id = new Guid("03658c3d-d92e-48c3-8ceb-270473123299"),
-                            CreatedAt = new DateTime(2024, 10, 28, 11, 32, 17, 382, DateTimeKind.Utc).AddTicks(4003),
+                            Id = new Guid("4f9d35d7-e889-4fe3-8136-39efcfc5c3e8"),
+                            CreatedAt = new DateTime(2024, 10, 24, 17, 56, 0, 187, DateTimeKind.Utc).AddTicks(1805),
                             Name = "Terror",
-                            UpdatedAt = new DateTime(2024, 10, 28, 11, 32, 17, 382, DateTimeKind.Utc).AddTicks(4003)
+                            UpdatedAt = new DateTime(2024, 10, 24, 17, 56, 0, 187, DateTimeKind.Utc).AddTicks(1805)
                         },
                         new
                         {
-                            Id = new Guid("7b678ab6-26f6-4857-87d9-5ab276a60b18"),
-                            CreatedAt = new DateTime(2024, 10, 28, 11, 32, 17, 382, DateTimeKind.Utc).AddTicks(4007),
+                            Id = new Guid("d777686d-ad6e-47ba-a0d5-006d06f794c5"),
+                            CreatedAt = new DateTime(2024, 10, 24, 17, 56, 0, 187, DateTimeKind.Utc).AddTicks(1817),
                             Name = "Autoajuda",
-                            UpdatedAt = new DateTime(2024, 10, 28, 11, 32, 17, 382, DateTimeKind.Utc).AddTicks(4008)
+                            UpdatedAt = new DateTime(2024, 10, 24, 17, 56, 0, 187, DateTimeKind.Utc).AddTicks(1818)
                         },
                         new
                         {
-                            Id = new Guid("dbf6e799-8b73-4491-bd2d-c4bc237baeb8"),
-                            CreatedAt = new DateTime(2024, 10, 28, 11, 32, 17, 382, DateTimeKind.Utc).AddTicks(4012),
+                            Id = new Guid("37bd3107-f71f-4163-9d2d-1b6584ccd33c"),
+                            CreatedAt = new DateTime(2024, 10, 24, 17, 56, 0, 187, DateTimeKind.Utc).AddTicks(1829),
                             Name = "Poesia",
-                            UpdatedAt = new DateTime(2024, 10, 28, 11, 32, 17, 382, DateTimeKind.Utc).AddTicks(4012)
+                            UpdatedAt = new DateTime(2024, 10, 24, 17, 56, 0, 187, DateTimeKind.Utc).AddTicks(1830)
                         },
                         new
                         {
-                            Id = new Guid("d1c99335-1e96-40c6-8ced-ee6928cb634a"),
-                            CreatedAt = new DateTime(2024, 10, 28, 11, 32, 17, 382, DateTimeKind.Utc).AddTicks(4016),
+                            Id = new Guid("dca4797d-da2c-4c2e-a3ae-1d1987917f4d"),
+                            CreatedAt = new DateTime(2024, 10, 24, 17, 56, 0, 187, DateTimeKind.Utc).AddTicks(1842),
                             Name = "Drama",
-                            UpdatedAt = new DateTime(2024, 10, 28, 11, 32, 17, 382, DateTimeKind.Utc).AddTicks(4017)
+                            UpdatedAt = new DateTime(2024, 10, 24, 17, 56, 0, 187, DateTimeKind.Utc).AddTicks(1843)
                         },
                         new
                         {
-                            Id = new Guid("0eb5ff7a-bf20-467f-88eb-ad4a9e416cf4"),
-                            CreatedAt = new DateTime(2024, 10, 28, 11, 32, 17, 382, DateTimeKind.Utc).AddTicks(4021),
+                            Id = new Guid("717ce636-8d8c-435a-bc62-13502d34c56a"),
+                            CreatedAt = new DateTime(2024, 10, 24, 17, 56, 0, 187, DateTimeKind.Utc).AddTicks(1855),
                             Name = "Humor",
-                            UpdatedAt = new DateTime(2024, 10, 28, 11, 32, 17, 382, DateTimeKind.Utc).AddTicks(4021)
+                            UpdatedAt = new DateTime(2024, 10, 24, 17, 56, 0, 187, DateTimeKind.Utc).AddTicks(1856)
                         },
                         new
                         {
-                            Id = new Guid("25d750fb-9a0a-4135-8520-4116f70238f9"),
-                            CreatedAt = new DateTime(2024, 10, 28, 11, 32, 17, 382, DateTimeKind.Utc).AddTicks(4025),
+                            Id = new Guid("49b8f6bd-0ec4-47ce-9dc8-61aff779a05c"),
+                            CreatedAt = new DateTime(2024, 10, 24, 17, 56, 0, 187, DateTimeKind.Utc).AddTicks(1867),
                             Name = "Tecnologia",
-                            UpdatedAt = new DateTime(2024, 10, 28, 11, 32, 17, 382, DateTimeKind.Utc).AddTicks(4025)
+                            UpdatedAt = new DateTime(2024, 10, 24, 17, 56, 0, 187, DateTimeKind.Utc).AddTicks(1868)
                         },
                         new
                         {
-                            Id = new Guid("92ab711d-b075-4b6f-a8f1-47bbec684f94"),
-                            CreatedAt = new DateTime(2024, 10, 28, 11, 32, 17, 382, DateTimeKind.Utc).AddTicks(4030),
+                            Id = new Guid("0cc9e10d-5330-43a7-a256-3f00e7a111b9"),
+                            CreatedAt = new DateTime(2024, 10, 24, 17, 56, 0, 187, DateTimeKind.Utc).AddTicks(1880),
                             Name = "Negócios",
-                            UpdatedAt = new DateTime(2024, 10, 28, 11, 32, 17, 382, DateTimeKind.Utc).AddTicks(4030)
+                            UpdatedAt = new DateTime(2024, 10, 24, 17, 56, 0, 187, DateTimeKind.Utc).AddTicks(1881)
                         },
                         new
                         {
-                            Id = new Guid("7f29d28c-ce0a-4976-b130-a7cd51ea18c0"),
-                            CreatedAt = new DateTime(2024, 10, 28, 11, 32, 17, 382, DateTimeKind.Utc).AddTicks(4034),
+                            Id = new Guid("42d3e87a-d800-4cad-8e1b-df3d6bcf28ee"),
+                            CreatedAt = new DateTime(2024, 10, 24, 17, 56, 0, 187, DateTimeKind.Utc).AddTicks(1892),
                             Name = "Saúde",
-                            UpdatedAt = new DateTime(2024, 10, 28, 11, 32, 17, 382, DateTimeKind.Utc).AddTicks(4034)
+                            UpdatedAt = new DateTime(2024, 10, 24, 17, 56, 0, 187, DateTimeKind.Utc).AddTicks(1893)
                         },
                         new
                         {
-                            Id = new Guid("dd1ad99b-b10b-4752-be50-e1625c3ac987"),
-                            CreatedAt = new DateTime(2024, 10, 28, 11, 32, 17, 382, DateTimeKind.Utc).AddTicks(4038),
+                            Id = new Guid("6e7523d1-e7c0-49b8-adc0-a7fea794dcd3"),
+                            CreatedAt = new DateTime(2024, 10, 24, 17, 56, 0, 187, DateTimeKind.Utc).AddTicks(1904),
                             Name = "Educação",
-                            UpdatedAt = new DateTime(2024, 10, 28, 11, 32, 17, 382, DateTimeKind.Utc).AddTicks(4039)
+                            UpdatedAt = new DateTime(2024, 10, 24, 17, 56, 0, 187, DateTimeKind.Utc).AddTicks(1905)
                         },
                         new
                         {
-                            Id = new Guid("1a6c942f-5b97-4e98-85a4-70049450d2a3"),
-                            CreatedAt = new DateTime(2024, 10, 28, 11, 32, 17, 382, DateTimeKind.Utc).AddTicks(4043),
+                            Id = new Guid("ea53d7fa-4e44-48fd-b6d0-4244ff403fc9"),
+                            CreatedAt = new DateTime(2024, 10, 24, 17, 56, 0, 187, DateTimeKind.Utc).AddTicks(1917),
                             Name = "Religião",
-                            UpdatedAt = new DateTime(2024, 10, 28, 11, 32, 17, 382, DateTimeKind.Utc).AddTicks(4043)
+                            UpdatedAt = new DateTime(2024, 10, 24, 17, 56, 0, 187, DateTimeKind.Utc).AddTicks(1918)
                         },
                         new
                         {
-                            Id = new Guid("3bc3581c-77d6-415a-bf58-680c084e6730"),
-                            CreatedAt = new DateTime(2024, 10, 28, 11, 32, 17, 382, DateTimeKind.Utc).AddTicks(4047),
+                            Id = new Guid("59c38890-e8a3-4f9f-b05e-39f45ce51b20"),
+                            CreatedAt = new DateTime(2024, 10, 24, 17, 56, 0, 187, DateTimeKind.Utc).AddTicks(1930),
                             Name = "Filosofia",
-                            UpdatedAt = new DateTime(2024, 10, 28, 11, 32, 17, 382, DateTimeKind.Utc).AddTicks(4047)
+                            UpdatedAt = new DateTime(2024, 10, 24, 17, 56, 0, 187, DateTimeKind.Utc).AddTicks(1931)
                         },
                         new
                         {
-                            Id = new Guid("a6b7efc7-724e-438f-8ff2-e2b4821f6b30"),
-                            CreatedAt = new DateTime(2024, 10, 28, 11, 32, 17, 382, DateTimeKind.Utc).AddTicks(4051),
+                            Id = new Guid("c0f59472-43d8-43f5-bec3-72b41549673f"),
+                            CreatedAt = new DateTime(2024, 10, 24, 17, 56, 0, 187, DateTimeKind.Utc).AddTicks(1942),
                             Name = "Arte",
-                            UpdatedAt = new DateTime(2024, 10, 28, 11, 32, 17, 382, DateTimeKind.Utc).AddTicks(4052)
+                            UpdatedAt = new DateTime(2024, 10, 24, 17, 56, 0, 187, DateTimeKind.Utc).AddTicks(1943)
                         });
                 });
 
@@ -273,7 +276,8 @@ namespace MinhaBiblioteca.Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("BookCopyId");
+                    b.HasIndex("BookCopyId")
+                        .IsUnique();
 
                     b.HasIndex("UserId");
 
@@ -340,10 +344,8 @@ namespace MinhaBiblioteca.Infrastructure.Migrations
             modelBuilder.Entity("MinhaBiblioteca.Core.Entities.Loan", b =>
                 {
                     b.HasOne("MinhaBiblioteca.Core.Entities.BookCopy", "BookCopy")
-                        .WithMany("Loan")
-                        .HasForeignKey("BookCopyId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .WithOne("Loan")
+                        .HasForeignKey("MinhaBiblioteca.Core.Entities.Loan", "BookCopyId");
 
                     b.HasOne("MinhaBiblioteca.Core.Entities.User", "User")
                         .WithMany("Loans")

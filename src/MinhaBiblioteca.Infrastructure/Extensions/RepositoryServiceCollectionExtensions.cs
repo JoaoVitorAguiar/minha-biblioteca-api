@@ -14,6 +14,7 @@ public static class RepositoryServiceCollectionExtensions
         services.AddScoped<IBookRepository, BookRepository>();
         services.AddScoped<ILoanRepository, LoanRepository>();
         services.AddScoped<ICategoryRepository, CategoryRepository>();
+        services.AddScoped<IBookCopyRepository, BookCopyRepository>();
 
         return services;
     }

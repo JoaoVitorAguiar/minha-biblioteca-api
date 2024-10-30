@@ -12,5 +12,12 @@ public class BookConfiguration : IEntityTypeConfiguration<Book>
 
         builder.Property(b => b.Id)
             .ValueGeneratedOnAdd();
+
+        builder.HasIndex(b => b.ISBN).IsUnique();
+
+        builder.HasMany(b => b.BookCopies)
+            .WithOne(bc => bc.Book)
+            .HasForeignKey(bc => bc.BookId)
+            .OnDelete(DeleteBehavior.Cascade);
     }
 }

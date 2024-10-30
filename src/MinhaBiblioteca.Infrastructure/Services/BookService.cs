@@ -14,25 +14,17 @@ public class BookService : IBookService
         _dbContext = dbContext;
     }
 
-    public async Task<Book?> GetFirstBookAvailableByIsbnOrDefaultAsync(string isbn)
+    public async Task<BookCopy?> GetFirstBookCopyAvailableByIsbnOrDefaultAsync(Book book)
     {
-        var books = await _dbContext.Books
-                .Where(b => b.ISBN == isbn)
-                .ToListAsync();
-        if (!books.Any()) { throw new NotFoundException(typeof(Book)); }
-
-        foreach (var book in books)
+        var bookCopies = await _dbContext.BookCopies.Where(cp => cp.BookId == book.Id).AsNoTracking().ToListAsync();
+        foreach (var bookCopy in bookCopies)
         {
-            var hasActiveLoan = await _dbContext.Loans
-                .Where(l => l.BookId == book.Id && l.ReturnDate == null)
+            var hasActiveLoan = await _dbContext
+                .Loans
+                .Where(l => l.BookCopyId == bookCopy.Id && l.ReturnDate == null)
                 .AnyAsync();
-
-            if (!hasActiveLoan)
-            {
-                return book;
-            }
+            if (!hasActiveLoan) return bookCopy;
         }
-
         return null;
     }
 }
