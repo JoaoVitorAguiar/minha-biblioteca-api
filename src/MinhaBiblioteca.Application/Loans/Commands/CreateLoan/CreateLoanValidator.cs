@@ -6,9 +6,6 @@ public class CreateLoanValidator : AbstractValidator<CreateLoanCommand>
 {
     public CreateLoanValidator()
     {
-        RuleFor(x => x.LoanDate)
-               .NotEmpty().WithMessage("Loan date is required.")
-               .LessThanOrEqualTo(DateTime.UtcNow).WithMessage("Loan date cannot be in the future.");
 
         RuleFor(x => x.UserEmail)
             .NotEmpty().WithMessage("User email is required.")

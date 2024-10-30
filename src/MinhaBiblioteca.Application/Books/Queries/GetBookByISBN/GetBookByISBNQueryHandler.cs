@@ -16,7 +16,7 @@ public class GetBookByISBNQueryHandler : IRequestHandler<GetBookByISBNQuery, Get
 
     public async Task<GetBookByISBNQueryDTO> Handle(GetBookByISBNQuery request, CancellationToken cancellationToken)
     {
-        var book = await _bookRepository.GetByISBNAsync(request.ISBN) ?? throw new NotFoundException(typeof(Book));
+        var book = await _bookRepository.GetByIsbnAsync(request.ISBN) ?? throw new NotFoundException(typeof(Book));
         return new GetBookByISBNQueryDTO
         {
             Title = book.Title,
