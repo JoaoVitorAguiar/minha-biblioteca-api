@@ -1,5 +1,6 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
+using MinhaBiblioteca.Application.Loans;
 using MinhaBiblioteca.Application.Loans.Commands.CreateLoan;
 
 namespace MinhaBiblioteca.Api.Controllers;
@@ -18,7 +19,16 @@ public class LoanController : ControllerBase
     public async Task<IActionResult> Create(
         [FromBody] CreateLoanCommand command)
     {
-        await _mediator.Send(command);  
+        await _mediator.Send(command);
+        return Ok();
+    }
+
+    [HttpDelete]
+    public async Task<IActionResult> Delete(
+        [FromQuery] LoanReturn command
+    )
+    {
+        await _mediator.Send(command);
         return Ok();
     }
 }
